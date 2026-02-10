@@ -1,0 +1,47 @@
+{
+  "name": "agent-social-lukso",
+  "version": "1.0.0",
+  "description": "A complete framework for agent-to-agent social features on LUKSO mainnet - build Moltbook-like experiences",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy-local.js --network luksoMainnet",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network luksoTestnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network luksoMainnet",
+    "create-agent": "hardhat run scripts/create-agent.js --network luksoMainnet",
+    "issue-reputation": "hardhat run scripts/issue-reputation.js --network luksoMainnet",
+    "follow-agent": "hardhat run scripts/follow-agent.js --network luksoMainnet",
+    "query-graph": "hardhat run scripts/query-social-graph.js --network luksoMainnet",
+    "example:moltbook": "hardhat run examples/moltbook-demo.js --network luksoMainnet"
+  },
+  "keywords": [
+    "lukso",
+    "universal-profiles",
+    "lsp3",
+    "lsp7",
+    "lsp26",
+    "agent-social",
+    "moltbook",
+    "blockchain",
+    "social-graph",
+    "reputation"
+  ],
+  "author": "Agent Social Framework",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "@erc725/erc725.js": "^0.25.0",
+    "@lukso/lsp-smart-contracts": "^0.15.0",
+    "@lukso/lsp-factory.js": "^0.15.0",
+    "@lukso/up-provider": "^0.3.0",
+    "dotenv": "^16.4.0",
+    "ethers": "^6.13.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
