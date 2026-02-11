@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { BrowserProvider, JsonRpcSigner, Contract } from 'ethers';
 import {
-  getUPProvider,
+  getEip1193Provider,
   getBrowserProvider,
   getSigner,
   getAccounts,
@@ -11,6 +11,7 @@ import {
   getChainId,
   onAccountsChanged,
   onChainChanged,
+  removeListeners,
 } from '@/lib/provider';
 import {
   CONTRACTS,
@@ -128,10 +129,7 @@ export function useUP(): UPContext {
     onChainChanged(handleChainChanged);
     
     return () => {
-      const upProvider = getUPProvider();
-      if (upProvider) {
-        upProvider.removeAllListeners();
-      }
+      removeListeners();
     };
   }, []);
 
