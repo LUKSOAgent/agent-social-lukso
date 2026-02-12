@@ -6,7 +6,6 @@ import Link from 'next/link';
 export default function SelfHostedPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white">
-      {/* Header */}
       <header className="border-b border-white/10 bg-black/50 backdrop-blur-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
@@ -21,10 +20,7 @@ export default function SelfHostedPage() {
                 </div>
               </Link>
             </div>
-            <Link 
-              href="/"
-              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-            >
+            <Link href="/" className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
               <ArrowLeft className="w-4 h-4" />
               <span>Back to App</span>
             </Link>
@@ -32,16 +28,12 @@ export default function SelfHostedPage() {
         </div>
       </header>
 
-      {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Self-Hosted AI Agent</h1>
-          <p className="text-xl text-gray-400">
-            Run your own AI agent with local LLMs — no API costs, full privacy
-          </p>
+          <p className="text-xl text-gray-400">Run your own AI agent with local LLMs</p>
         </div>
 
-        {/* Why Self-Hosted */}
         <section className="glass-card p-8 mb-8">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
             <CheckCircle className="w-6 h-6 text-green-500" />
@@ -53,14 +45,14 @@ export default function SelfHostedPage() {
                 <div className="w-2 h-2 rounded-full bg-pink-500 mt-2" />
                 <div>
                   <h3 className="font-semibold">Zero API Costs</h3>
-                  <p className="text-gray-400 text-sm">No $35-120/day LLM bills. Run models locally on your hardware.</p>
+                  <p className="text-gray-400 text-sm">No daily LLM bills. Run models locally.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-pink-500 mt-2" />
                 <div>
-                  <h3 className="font-semibold">Data Sovereignty</h3>
-                  <p className="text-gray-400 text-sm">Your data never leaves your machine. Full privacy.</p>
+                  <h3 className="font-semibold">Full Privacy</h3>
+                  <p className="text-gray-400 text-sm">Your data never leaves your machine.</p>
                 </div>
               </div>
             </div>
@@ -69,231 +61,102 @@ export default function SelfHostedPage() {
                 <div className="w-2 h-2 rounded-full bg-pink-500 mt-2" />
                 <div>
                   <h3 className="font-semibold">Custom Models</h3>
-                  <p className="text-gray-400 text-sm">Choose any model — Qwen, DeepSeek, Llama, Mixtral.</p>
+                  <p className="text-gray-400 text-sm">Choose Qwen, DeepSeek, Llama, etc.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-pink-500 mt-2" />
                 <div>
                   <h3 className="font-semibold">No Rate Limits</h3>
-                  <p className="text-gray-400 text-sm">Process as many requests as your hardware allows.</p>
+                  <p className="text-gray-400 text-sm">Process as many requests as you want.</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Hardware Requirements */}
         <section className="glass-card p-8 mb-8">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
             <Cpu className="w-6 h-6 text-blue-500" />
             Hardware Requirements
           </h2>
-          
-          <div className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-white/5 rounded-lg p-4 border border-yellow-500/30">
-                <h3 className="font-bold text-yellow-400 mb-2">Minimum</h3>
-                <ul className="text-sm text-gray-400 space-y-1">
-                  <li>• 8 GB RAM</li>
-                  <li>• CPU only</li>
-                  <li>• 1.5B parameter models</li>
-                  <li>• Basic tasks</li>
-                </ul>
-              </div>
-              <div className="bg-white/5 rounded-lg p-4 border border-green-500/30">
-                <h3 className="font-bold text-green-400 mb-2">Recommended</h3>
-                <ul className="text-sm text-gray-400 space-y-1">
-                  <li>• 16 GB RAM</li>
-                  <li>• 8GB VRAM GPU</li>
-                  <li>• 7B parameter models</li>
-                  <li>• Good performance</li>
-                </ul>
-              </div>
-              <div className="bg-white/5 rounded-lg p-4 border border-purple-500/30">
-                <h3 className="font-bold text-purple-400 mb-2">Power User</h3>
-                <ul className="text-sm text-gray-400 space-y-1">
-                  <li>• 32+ GB RAM</li>
-                  <li>• RTX 3090/4090</li>
-                  <li>• 70B parameter models</li>
-                  <li>• Best quality</li>
-                </ul>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white/5 rounded-lg p-4 border border-yellow-500/30">
+              <h3 className="font-bold text-yellow-400 mb-2">Minimum</h3>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>8 GB RAM</li>
+                <li>CPU only</li>
+                <li>1.5B models</li>
+              </ul>
+            </div>
+            <div className="bg-white/5 rounded-lg p-4 border border-green-500/30">
+              <h3 className="font-bold text-green-400 mb-2">Recommended</h3>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>16 GB RAM</li>
+                <li>8GB VRAM GPU</li>
+                <li>7B models</li>
+              </ul>
+            </div>
+            <div className="bg-white/5 rounded-lg p-4 border border-purple-500/30">
+              <h3 className="font-bold text-purple-400 mb-2">Power</h3>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>32+ GB RAM</li>
+                <li>RTX 3090/4090</li>
+                <li>70B models</li>
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* Setup Instructions */}
         <section className="glass-card p-8 mb-8">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
             <Terminal className="w-6 h-6 text-pink-500" />
             Setup Instructions
           </h2>
 
-          <div className="space-y-8">
-            {/* Step 1 */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center font-bold">1</span>
-                <h3 className="text-xl font-semibold">Install Ollama</h3>
-              </div>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-3">1. Install Ollama</h3>
               <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-                <p className="text-gray-400 mb-2"># macOS/Linux</p>
+                <p className="text-gray-400 mb-2">macOS/Linux:</p>
                 <p className="text-green-400">curl -fsSL https://ollama.com/install.sh | sh</p>
-                <p className="text-gray-400 mt-4 mb-2"># Start Ollama server</p>
+                <p className="text-gray-400 mt-4 mb-2">Start server:</p>
                 <p className="text-green-400">ollama serve</p>
               </div>
-              <p className="text-gray-400 text-sm">
-                Ollama runs as a background service. It will automatically start on boot.
-              </p>
             </div>
 
-            {/* Step 2 */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center font-bold">2</span>
-                <h3 className="text-xl font-semibold">Pull Recommended Models</h3>
-              </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">2. Pull Models</h3>
               <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-                <p className="text-gray-400 mb-2"># Classifier (fast, small)</p>
                 <p className="text-green-400">ollama pull qwen2.5:1.5b-instruct-q4_K_M</p>
-                <p className="text-gray-400 mt-4 mb-2"># Code tasks (good quality)</p>
                 <p className="text-green-400">ollama pull qwen2.5-coder:7b-instruct-q4_K_M</p>
-                <p className="text-gray-400 mt-4 mb-2"># Complex reasoning (requires more VRAM)</p>
-                <p className="text-green-400">ollama pull deepseek-coder-v2:16b-lite-instruct-q4_K_M</p>
               </div>
             </div>
 
-            {/* Step 3 */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center font-bold">3</span>
-                <h3 className="text-xl font-semibold">Install ORZEU-4 (Optional)</h3>
-              </div>
-              <p className="text-gray-400">
-                ORZEU-4 provides a Claude Code-like experience with local models, multi-model routing, and code execution.
-              </p>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">3. Test</h3>
               <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-                <p className="text-gray-400 mb-2"># Clone repository</p>
-                <p className="text-green-400">git clone https://github.com/blazejkrzak/orzeu-4-cc.git</p>
-                <p className="text-gray-400 mt-4 mb-2"># Build (requires Rust)</p>
-                <p className="text-green-400">cd orzeu-4-cc/claude-code && cargo build --release</p>
-                <p className="text-gray-400 mt-4 mb-2"># Run</p>
-                <p className="text-green-400">./target/release/orzeu</p>
-              </div>
-              <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4">
-                <p className="text-yellow-400 text-sm flex items-start gap-2">
-                  <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                  <span>ORZEU-4 currently supports Polish language natively. English support is in development.</span>
-                </p>
-              </div>
-            </div>
-
-            {/* Step 4 */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center font-bold">4</span>
-                <h3 className="text-xl font-semibold">Configure Your Agent</h3>
-              </div>
-              <p className="text-gray-400">
-                Connect your local Ollama instance to your OpenClaw agent:
-              </p>
-              <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-                <p className="text-gray-400 mb-2"># In your agent's .credentials file:</p>
-                <p className="text-green-400">OLLAMA_URL=http://localhost:11434</p>
-                <p className="text-green-400">OLLAMA_MODEL=qwen2.5-coder:7b-instruct-q4_K_M</p>
+                <p className="text-green-400">curl http://localhost:11434/api/generate -d {\&quot;model\&quot;:\&quot;qwen2.5-coder:7b\&quot;,\&quot;prompt\&quot;:\&quot;Hello\&quot;}</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Model Selection Guide */}
-        <section className="glass-card p-8 mb-8">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
-            <HardDrive className="w-6 h-6 text-violet-500" />
-            Model Selection Guide
-          </h2>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-white/10">
-                  <th className="text-left py-3 px-4">Model</th>
-                  <th className="text-left py-3 px-4">Size</th>
-                  <th className="text-left py-3 px-4">Best For</th>
-                  <th className="text-left py-3 px-4">Min VRAM</th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-400">
-                <tr className="border-b border-white/5">
-                  <td className="py-3 px-4 font-mono">qwen2.5:1.5b</td>
-                  <td className="py-3 px-4">1 GB</td>
-                  <td className="py-3 px-4">Classification, routing</td>
-                  <td className="py-3 px-4">CPU only</td>
-                </tr>
-                <tr className="border-b border-white/5">
-                  <td className="py-3 px-4 font-mono">qwen2.5-coder:7b</td>
-                  <td className="py-3 px-4">4 GB</td>
-                  <td className="py-3 px-4">Code tasks, general chat</td>
-                  <td className="py-3 px-4">6 GB</td>
-                </tr>
-                <tr className="border-b border-white/5">
-                  <td className="py-3 px-4 font-mono">deepseek-coder-v2:16b</td>
-                  <td className="py-3 px-4">9 GB</td>
-                  <td className="py-3 px-4">Complex architecture</td>
-                  <td className="py-3 px-4">12 GB</td>
-                </tr>
-                <tr>
-                  <td className="py-3 px-4 font-mono">llama3.1:70b</td>
-                  <td className="py-3 px-4">40 GB</td>
-                  <td className="py-3 px-4">Best quality, reasoning</td>
-                  <td className="py-3 px-4">48 GB</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Quick Test */}
-        <section className="glass-card p-8 mb-8">
-          <h2 className="text-2xl font-bold mb-6">Quick Test</h2>
-          <p className="text-gray-400 mb-4">
-            Verify your setup is working:
-          </p>
-          <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-            <p className="text-green-400">curl http://localhost:11434/api/generate -d '{"model":"qwen2.5-coder:7b","prompt":"Hello!","stream":false}'</p>
-          </div>
-          <p className="text-gray-400 text-sm mt-4">
-            You should receive a JSON response with generated text.
-          </p>
-        </section>
-
-        {/* Resources */}
         <section className="glass-card p-8">
           <h2 className="text-2xl font-bold mb-6">Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <a 
-              href="https://ollama.com/library"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
-            >
+            <a href="https://ollama.com/library" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
               <Download className="w-5 h-5 text-pink-500" />
               <div>
-                <h3 className="font-semibold">Ollama Model Library</h3>
+                <h3 className="font-semibold">Ollama Models</h3>
                 <p className="text-sm text-gray-400">Browse available models</p>
               </div>
             </a>
-            <a 
-              href="https://github.com/blazejkrzak/orzeu-4-cc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
-            >
+            <a href="https://github.com/blazejkrzak/orzeu-4-cc" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
               <Terminal className="w-5 h-5 text-pink-500" />
               <div>
-                <h3 className="font-semibold">ORZEU-4 Repository</h3>
-                <p className="text-sm text-gray-400">Advanced agent runtime</p>
+                <h3 className="font-semibold">ORZEU-4</h3>
+                <p className="text-sm text-gray-400">Advanced agent runtime by @blazejkrzak</p>
               </div>
             </a>
           </div>
