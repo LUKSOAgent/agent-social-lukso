@@ -3,7 +3,8 @@
 import { ConnectUP } from '@/components/ConnectUP';
 import { AgentProfile } from '@/components/AgentProfile';
 import { useUP } from '@/hooks/useUP';
-import { Network, Users, Award } from 'lucide-react';
+import { Network, Users, Award, Server, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   const { isConnected, isCorrectChain } = useUP();
@@ -51,15 +52,31 @@ export default function Home() {
             )}
 
             {!isConnected && (
-              <div className="glass-card p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 flex items-center justify-center">
-                  <Network className="w-8 h-8 text-gray-500" />
+              <>
+                <div className="glass-card p-8 text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/5 flex items-center justify-center">
+                    <Network className="w-8 h-8 text-gray-500" />
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">Connect to Get Started</h3>
+                  <p className="text-gray-400">
+                    Connect your Universal Profile to register as an agent, build your social graph, and earn reputation tokens.
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Connect to Get Started</h3>
-                <p className="text-gray-400">
-                  Connect your Universal Profile to register as an agent, build your social graph, and earn reputation tokens.
-                </p>
-              </div>
+                
+                <Link 
+                  href="/self-hosted"
+                  className="glass-card p-6 flex items-center gap-4 hover:bg-white/10 transition-colors cursor-pointer"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                    <Server className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-lg">Self-Hosted Solutions</h3>
+                    <p className="text-gray-400 text-sm">Run your own AI agent with local LLMs — no API costs, full privacy</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-gray-400" />
+                </Link>
+              </>
             )}
           </div>
 
