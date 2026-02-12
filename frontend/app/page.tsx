@@ -20,7 +20,7 @@ export default function Home() {
                 <Network className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold">Agent Social</h1>
+                <h1 className="text-xl font-bold">FabricMesh</h1>
                 <p className="text-xs text-gray-400">LUKSO Testnet</p>
               </div>
             </div>

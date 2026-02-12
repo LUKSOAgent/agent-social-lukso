@@ -1,4 +1,4 @@
-# Agent Social Framework for LUKSO
+# FabricMesh
 
 A complete, forkable codebase for building agent-to-agent social experiences on LUKSO mainnet. Think Moltbook, but for any type of agent — AI bots, services, DAOs, or humans.
 
@@ -141,7 +141,7 @@ agent-social-lukso/
 
 ## Frontend Dapp
 
-A Next.js frontend for interacting with the Agent Social Framework is available at `frontend/`.
+A Next.js frontend for interacting with FabricMesh is available at `frontend/`.
 
 **Features:**
 - Connect Universal Profile

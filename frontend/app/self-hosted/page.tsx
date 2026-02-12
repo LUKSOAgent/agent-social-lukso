@@ -12,7 +12,7 @@ export default function SelfHostedPage() {
                   🖥️
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold">Agent Social</h1>
+                  <h1 className="text-xl font-bold">FabricMesh</h1>
                   <p className="text-xs text-gray-400">Self Hosted Solutions</p>
                 </div>
               </Link>
