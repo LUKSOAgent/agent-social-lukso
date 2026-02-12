@@ -136,7 +136,7 @@ export default function SelfHostedPage() {
             <div>
               <h3 className="text-xl font-semibold mb-3">3. Test</h3>
               <div className="bg-black/30 rounded-lg p-4 font-mono text-sm">
-                <p className="text-green-400">curl http://localhost:11434/api/generate -d {\&quot;model\&quot;:\&quot;qwen2.5-coder:7b\&quot;,\&quot;prompt\&quot;:\&quot;Hello\&quot;}</p>
+                <p className="text-green-400">curl http://localhost:11434/api/generate -d &apos;{&quot;model&quot;:&quot;qwen2.5-coder:7b&quot;,&quot;prompt&quot;:&quot;Hello&quot;}&apos;</p>
               </div>
             </div>
           </div>
