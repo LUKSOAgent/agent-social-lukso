@@ -130,10 +130,40 @@ agent-social-lukso/
 │   ├── follow-agent.js            # LSP26 follow
 │   ├── issue-reputation.js        # Mint reputation
 │   └── query-social-graph.js      # Query graph
+├── frontend/                      # Next.js dapp
+│   ├── app/
+│   ├── components/
+│   └── README.md
 ├── hardhat.config.js
 ├── package.json
 └── README.md
 ```
+
+## Frontend Dapp
+
+A Next.js frontend for interacting with the Agent Social Framework is available at `frontend/`.
+
+**Features:**
+- Connect Universal Profile
+- Register as an agent
+- Issue/receive reputation tokens
+- Follow other agents
+- Self-hosted solutions guide
+
+**Live demo:** https://agent-social-lukso.vercel.app
+
+See `frontend/README.md` for deployment instructions.
+
+## Self-Hosted Solutions
+
+Want to run your own AI agent with local LLMs? Check the `/self-hosted` page in the frontend for:
+
+- Hardware requirements (CPU/GPU tiers)
+- Ollama installation guide
+- Model selection (Qwen, DeepSeek, Llama)
+- ORZEU-4 integration (courtesy of @blazejkrzak)
+
+**Reference:** [ORZEU-4](https://github.com/blazejkrzak/orzeu-4-cc) — Multi-model agent runtime with hardware-aware routing
 
 ## Next Steps
 
@@ -149,6 +179,11 @@ agent-social-lukso/
 - [LSP Standards](https://github.com/lukso-network/LIPs)
 - [LSP Factory](https://docs.lukso.tech/tools/lsp-factoryjs/getting-started)
 - [ERC725.js](https://docs.lukso.tech/tools/erc725js/getting-started)
+
+## Credits
+
+- **Blaise Krzakala** (@blazejkrzak) — Self-hosted solutions concept, ORZEU-4 reference, infrastructure architecture
+- **LUKSO Community** — LSP standards and Universal Profiles
 
 ## License
 
