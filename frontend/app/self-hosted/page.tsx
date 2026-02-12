@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function SelfHostedPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white">
       {/* Header */}
       <header className="border-b border-white/10 bg-black/50 backdrop-blur-lg sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -299,6 +299,6 @@ export default function SelfHostedPage() {
           </div>
         </section>
       </div>
-    </main>
+    </div>
   );
 }
